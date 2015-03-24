@@ -18,6 +18,7 @@ public class Crime {
         mId = UUID.randomUUID();
         mDate = new Date();
     }
+
     public Date getDate() {
         return mDate;
     }
@@ -44,5 +45,11 @@ public class Crime {
 
     public UUID getId() {
         return mId;
+    }
+
+    // Overriding the toString to display title of the crime instead of the class.
+    @Override
+    public String toString() {
+        return mTitle;
     }
 }

@@ -19,6 +19,13 @@ public class CrimeLab {
     // Context
     private CrimeLab(Context appContext) {
         mAppContext = appContext;
+        mCrimes = new ArrayList<Crime>();
+        for(int i = 0; i < 100; i++) {
+            Crime c = new Crime();
+            c.setTitle("Crime #"  + i);
+            c.setSolved(i % 2 == 0); // Every other one
+            mCrimes.add(c);
+        }
     }
 
     // Return the instance, if does not exist then create and
