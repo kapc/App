@@ -9,7 +9,7 @@ import android.view.MenuItem;
 import java.util.UUID;
 
 
-public class CrimeActivity extends SingleFragmentActivity {
+public class CrimeActivityDeprecated extends SingleFragmentActivity {
 
     @Override
     protected Fragment createFragment() {
