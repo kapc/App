@@ -1,6 +1,13 @@
 package com.example.ckap.criminalintent;
 
+import java.sql.Time;
+import java.text.DateFormat;
+import java.text.FieldPosition;
+import java.text.ParsePosition;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.UUID;
 
 /**
@@ -9,12 +16,12 @@ import java.util.UUID;
 public class Crime {
     private UUID mId;
     private String mTitle;
-
     private Date mDate;
     private boolean mSolved;
 
     public Crime() {
         // Generate unique identifier.
+        DateFormat df = new SimpleDateFormat("HH:mm:ss");
         mId = UUID.randomUUID();
         mDate = new Date();
     }
